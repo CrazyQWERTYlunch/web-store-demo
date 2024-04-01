@@ -1,66 +1,19 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/static/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/flexboxgrid2@7.2.1/flexboxgrid2.css"
-    />
-    <title>Домашняя страница магазина</title>
-  </head>
-  <body>
-    <header>
-      <ul>
-        <li><a href="home.html">Главная</a></li>
-        <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn">Каталог товаров</a>
-          <div class="dropdown-content">
-            <a href="#">Что-то 1</a>
-            <a href="#">Что-то 2</a>
-            <a href="#">Что-то 3</a>
-          </div>
-        </li>
-        <li><a href="#">Корзина</a></li>
-        <li style="float: right"><a href="login_register.html">Войти</a></li>
-      </ul>
-    </header>
-    
-    <section>
-      <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-lg-12">
-          <div class="block"><h1>О нашей компании</h1></div>
-        </div>
-        <div class="col-xs-12 col-lg-6">
-          <div class="block"><p>Какая-то информация...</p></div>
-        </div>
-        <div class="col-xs-12 col-lg-6">
-          <div class="block"><p>Какая-то картинка</p></div>
-        </div>
+{% extends "base.html" %}
+
+{% block title %}Домашняя страница магазина{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-lg-12">
+        <div class="block"><h1>О нашей компании</h1></div>
+      </div>
+      <div class="col-xs-12 col-lg-6">
+        <div class="block"><p>Какая-то информация...</p></div>
+      </div>
+      <div class="col-xs-12 col-lg-6">
+        <div class="block"><p>Какая-то картинка</p></div>
       </div>
     </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-lg-12">
-            <div class="block"><h2>Контактная информация</h2></div>
-          </div>
-          <div class="col-xs-12 col-lg-6">
-            <div class="block">Телефон: +7(000)000-00-00</div>
-          </div>
-          <div class="col-xs-12 col-lg-6">
-            <div class="block">Почта: foodstore@mail.ru</div>
-          </div>
-          <div class="col-xs-12 col-lg-12">
-            <div class="block">Адрес: г. Саратов, ул. Б. Садовая, д. 244Б</div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
+  </div>
+{% endblock  %}

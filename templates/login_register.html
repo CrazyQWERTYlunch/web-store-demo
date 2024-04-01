@@ -1,55 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/static/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/flexboxgrid2@7.2.1/flexboxgrid2.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
-    <script src="/static/script.js" async></script>
-    <title>Вход в аккаунт</title>
-  </head>
-  <body>
-    <header>
-      <ul>
-        <li><a href="home.html">Главная</a></li>
-        <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn">Каталог товаров</a>
-          <div class="dropdown-content">
-            <a href="#">Что-то 1</a>
-            <a href="#">Что-то 2</a>
-            <a href="#">Что-то 3</a>
-          </div>
-        </li>
-        <li><a href="#">Корзина</a></li>
-        <li style="float: right"><a href="#">Войти</a></li>
-      </ul>
-    </header>
+{% extends "base.html" %}
 
-    <div class="login-page">
-      <div class="form">
-        <form class="register-form">
-          <input type="text" placeholder="имя пользователя" />
-          <input type="password" placeholder="пароль" />
-          <input type="text" placeholder="почтовый адрес" />
-          <button>создать</button>
-          <p class="message">
-            Уже зарегестрированы? <a href="#">Войти в систему</a>
-          </p>
-        </form>
-        <form class="login-form">
-          <input type="text" placeholder="имя пользователя" />
-          <input type="password" placeholder="пароль" />
-          <button>войти</button>
-          <p class="message">
-            Не зарегестрированы? <a href="#">Создать аккаунт</a>
-          </p>
-        </form>
-      </div>
-    </div>
-  </body>
-</html>
+{% block title %}Вход в аккаунт{% endblock %}
+
+{% block content %}
+<div class="login-page">
+
+  <div class="form">
+
+    <form class="register-form">
+      <input type="text" placeholder="имя пользователя" />
+      <input type="password" placeholder="пароль" />
+      <input type="text" placeholder="почтовый адрес" />
+      <button>создать</button>
+      <p class="message">
+        Уже зарегестрированы? <a href="#">Войти в систему</a>
+      </p>
+    </form>
+    
+    <form class="login-form">
+      <input type="text" placeholder="имя пользователя" />
+      <input type="password" placeholder="пароль" />
+      <button>войти</button>
+      <p class="message">
+        Не зарегестрированы? <a href="#">Создать аккаунт</a>
+      </p>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
