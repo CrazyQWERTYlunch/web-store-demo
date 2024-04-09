@@ -44,3 +44,13 @@ class CategoryRepository:
             product_models = result.scalars().all()
             product_schemas = [SProduct.model_validate(product) for product in product_models]
             return product_schemas
+        
+    @classmethod
+    async def get_product(cls, product_id):
+        async with new_session() as session:
+            query = select(ProductOrm).filter_by(id=product_id)    
+            res = await session.execute(query)
+            result = res.scalar()
+            product = SProduct.model_validate(result)
+            return product
+           

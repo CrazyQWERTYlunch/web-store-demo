@@ -1,6 +1,5 @@
-from fastapi import APIRouter, Request, Depends
+from fastapi import APIRouter, Request, Depends, HTTPException, status
 from fastapi.responses import HTMLResponse
-from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 
@@ -35,13 +34,22 @@ async def add_category(body: Annotated[SCategoryCreate, Depends()]) -> SCategory
     return SCategoryId(ok=True, category_id=category_id)
 
 
-@catalog_router.get("/product")
+@catalog_router.get("/products")
 async def get_products() -> list[SProduct]:
     products = await CategoryRepository.view_products()
     return products
 
+
+@catalog_router.get("/product/{product_id}")
+async def get_product(request: Request, product_id: int):
+    product = await CategoryRepository.get_product(product_id)
+    if product is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product not found")
+    return templates.TemplateResponse("product_card.html", context={"request": request, "product": product})
+
+
 @catalog_router.post("/product/add")
-async def add_product(body: Annotated[SProductCreate, Depends()]) -> dict[bool,int]:
+async def add_product(body: Annotated[SProductCreate, Depends()]):
     product_id = await CategoryRepository.add_product(body)
     return {"ok": True, "data": product_id}
 
