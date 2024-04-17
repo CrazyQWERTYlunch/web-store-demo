@@ -1,11 +1,124 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Это мой крутой каталог</title>
-</head>
-<body>
-    <p>Это будет крутой каталог</p>
-</body>
-</html>
+{% extends "base.html" %} 
+
+{% block title %}Каталог товаров магазина{% endblock%} 
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-md-4 col-lg-3">
+      <!-- Карточка товара -->
+      <div class="card">
+        <!-- Верхняя часть -->
+        <div class="card__top">
+          <!-- Изображение-ссылка товара -->
+          <a href="#" class="card__image">
+            <img src="/static/imgs/eggs.jpg" alt="Eggs" />
+          </a>
+          <!-- Скидка на товар -->
+          <div class="card__label">-10%</div>
+        </div>
+        <!-- Нижняя часть -->
+        <div class="card__bottom">
+          <!-- Цены на товар (с учетом скидки и без)-->
+          <div class="card__prices">
+            <div class="card__price card__price--discount">90</div>
+            <div class="card__price card__price--common">
+              <div class="normal__price">100</div>
+            </div>
+          </div>
+          <!-- Ссылка-название товара -->
+          <a href="product_card.html" class="card__title"> Десяток яиц </a>
+          <!-- Кнопка добавить в корзину -->
+          <button class="card__add">В корзину</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6 col-md-4 col-lg-3">
+      <!-- Карточка товара -->
+      <div class="card">
+        <!-- Верхняя часть -->
+        <div class="card__top">
+          <!-- Изображение-ссылка товара -->
+          <a href="#" class="card__image">
+            <img src="/static/imgs/eggs.jpg" alt="Eggs" />
+          </a>
+          <!-- Скидка на товар -->
+          <div class="card__label">-10%</div>
+        </div>
+        <!-- Нижняя часть -->
+        <div class="card__bottom">
+          <!-- Цены на товар (с учетом скидки и без)-->
+          <div class="card__prices">
+            <div class="card__price card__price--discount">90</div>
+            <div class="card__price card__price--common">
+              <div class="normal__price">100</div>
+            </div>
+          </div>
+          <!-- Ссылка-название товара -->
+          <a href="#" class="card__title"> Десяток яиц </a>
+          <!-- Кнопка добавить в корзину -->
+          <button class="card__add">В корзину</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6 col-md-4 col-lg-3">
+      <!-- Карточка товара -->
+      <div class="card">
+        <!-- Верхняя часть -->
+        <div class="card__top">
+          <!-- Изображение-ссылка товара -->
+          <a href="#" class="card__image">
+            <img src="/static/imgs/eggs.jpg" alt="Eggs" />
+          </a>
+          <!-- Скидка на товар -->
+          <div class="card__label">-10%</div>
+        </div>
+        <!-- Нижняя часть -->
+        <div class="card__bottom">
+          <!-- Цены на товар (с учетом скидки и без)-->
+          <div class="card__prices">
+            <div class="card__price card__price--discount">90</div>
+            <div class="card__price card__price--common">
+              <div class="normal__price">100</div>
+            </div>
+          </div>
+          <!-- Ссылка-название товара -->
+          <a href="#" class="card__title"> Десяток яиц </a>
+          <!-- Кнопка добавить в корзину -->
+          <button class="card__add">В корзину</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6 col-md-4 col-lg-3">
+      <!-- Карточка товара -->
+      <div class="card">
+        <!-- Верхняя часть -->
+        <div class="card__top">
+          <!-- Изображение-ссылка товара -->
+          <a href="#" class="card__image">
+            <img src="/static/imgs/eggs.jpg" alt="Eggs" />
+          </a>
+          <!-- Скидка на товар -->
+          <div class="card__label">-10%</div>
+        </div>
+        <!-- Нижняя часть -->
+        <div class="card__bottom">
+          <!-- Цены на товар (с учетом скидки и без)-->
+          <div class="card__prices">
+            <div class="card__price card__price--discount">90</div>
+            <div class="card__price card__price--common">
+              <div class="normal__price">100</div>
+            </div>
+          </div>
+          <!-- Ссылка-название товара -->
+          <a href="#" class="card__title"> Десяток яиц </a>
+          <!-- Кнопка добавить в корзину -->
+          <button class="card__add">В корзину</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
