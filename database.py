@@ -4,8 +4,8 @@ from sqlalchemy.orm import declarative_base
 from config import DATABASE_URL
 
 engine = create_async_engine(
-    url=DATABASE_URL,
-    # """sqlite+aiosqlite:///category.db", # Заменить на нормальный URL и нормальную базу
+    # url=DATABASE_URL,
+    "sqlite+aiosqlite:///category.db", # Заменить на нормальный URL и нормальную базу
     echo=True,
     )
 

@@ -21,6 +21,7 @@ templates = Jinja2Templates(directory="templates")
 @catalog_router.get("/", response_class=HTMLResponse)
 async def catalog(request: Request):
     return templates.TemplateResponse(request=request, name="catalog.html")
+    
 
 @catalog_router.get("/category/")
 async def get_categories() -> list[SCategory]:

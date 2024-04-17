@@ -1,9 +1,33 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block title %}Product Details{% endblock %} {%
+block content %}
 
-{% block title %}Product Details{% endblock %}
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-12 col-lg-12">
+      <div class="product__card">
+        <div  class="product__img">
+          <img src="/static/imgs/eggs.jpg" alt="Eggs" />
+          <div class="card__label">-10%</div>
+        </div>
+          <div class="product__details">
+            <h1 class="product__title">Яйца</h1>
+              <p class="product__price product__price--common">
+                  Обычная 100 ₽
+              </p>
+              <p class="product__price product__price--discount">
+                Со скидкой 90 ₽
+              </p>
+            <p class="product__disc">Крутые яйца Крутые яйца Крутые яйца Крутые яйца Крутые яйца Крутые яйца</p>
+            <button class="card__add">Добавить в корзину</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-{% block content %}
-<h1>Product Details</h1>
+<!-- <h1>Product Details</h1>
 <p>Name: {{ product.name }}</p>
-<p>Price: {{ product.price }}</p>
+<p>Price: {{ product.price }}</p> -->
+
 {% endblock %}

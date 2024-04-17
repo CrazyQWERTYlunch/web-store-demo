@@ -21,7 +21,7 @@ async def lifespan(app: FastAPI):
     print("Выключение")
 
 
-app = FastAPI(title="simple-store",lifespan=lifespan) # lifespan=lifespan
+app = FastAPI(title="simple-store") # lifespan=lifespan
 app.include_router(catalog_router)
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
